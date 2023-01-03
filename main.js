@@ -1,12 +1,17 @@
 const choices = ['rock', 'paper', 'scissors'];
 let computerSelection;
-let playerSelection = 'rock';
+let playerSelection;
 let playerScore = 0;
 let computerScore = 0;
 
 function getComputerChoice() {
     const randomLogic = Math.floor(Math.random() * choices.length)
     let computerSelection = choices[randomLogic]
+}
+
+function getPlayerChoice() {
+    let choice = prompt('Please type Rock, paper or scissors below.')
+    playerSelection = choice.toLowerCase()
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -42,8 +47,4 @@ function playRound(playerSelection, computerSelection) {
 //     ask for selection in a dialog box using window.prompt()
 //     store response in playerSelection var
 //     change toLower 
-// }
-
-// function playRound(playerSelection, computerSelection) {
-
 // }

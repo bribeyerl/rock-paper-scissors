@@ -6,7 +6,7 @@ let computerScore = 0;
 
 function getComputerChoice() {
     const randomLogic = Math.floor(Math.random() * choices.length)
-    let computerSelection = choices[randomLogic]
+    computerSelection = choices[randomLogic]
 }
 
 function getPlayerChoice() {
@@ -43,8 +43,16 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 }
-// function getPlayerSelection() {
-//     ask for selection in a dialog box using window.prompt()
-//     store response in playerSelection var
-//     change toLower 
-// }
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        getComputerChoice()
+        getPlayerChoice()
+        playRound(playerSelection, computerSelection)
+    }
+    if (computerScore > playerScore) {
+        console.log(`Computer wins game! Final score: ${computerScore} - ${playerScore}`)
+    } else {
+        console.log(`Player wins game! Final score: ${playerScore} - ${computerScore}`)
+    }
+}

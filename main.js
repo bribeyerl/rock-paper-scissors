@@ -20,26 +20,26 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection === 'rock') {
         if (computerSelection === 'paper') {
             computerScore++
-            console.log(`Computer won! Score: Player: ${playerScore}, Computer: ${computerScore}`)
+            console.log(`Computer won! ${computerSelection} beats ${playerSelection}! Score: Player - ${playerScore}, Computer - ${computerScore}`)
         } else {
             playerScore++
-            console.log(`Player won! Score: Player: ${playerScore}, Computer: ${computerScore}`)
+            console.log(`Player won! ${playerSelection} beats ${computerSelection}! Score: Player - ${playerScore}, Computer - ${computerScore}`)
         }
     } else if (playerSelection === 'scissors') {
         if (computerSelection === 'rock') {
             computerScore++
-            console.log(`Computer won! Score: Player ${playerScore}, Computer ${computerScore}`)
+            console.log(`Computer won! ${computerSelection} beats ${playerSelection}! Score: Player - ${playerScore}, Computer - ${computerScore}`)
         } else {
             playerScore++
-            console.log(`Player won! Score: Player: ${playerScore}, Computer: ${computerScore}`)
+            console.log(`Player won! ${playerSelection} beats ${computerSelection}! Score: Player - ${playerScore}, Computer - ${computerScore}`)
         }
     } else if (playerSelection === 'paper') {
         if (computerSelection === 'scissors') {
             computerScore++
-            console.log(`Computer won! Score: Player: ${playerScore}, Computer: ${computerScore}`)
+            console.log(`Computer won! ${computerSelection} beats ${playerSelection}! Score: Player - ${playerScore}, Computer - ${computerScore}`)
         } else {
             playerScore++
-            console.log(`Player won! Score: Player: ${playerScore}, Computer: ${computerScore}`)
+            console.log(`Player won! ${playerSelection} beats ${computerSelection}! Score: Player - ${playerScore}, Computer - ${computerScore}`)
         }
     }
 }

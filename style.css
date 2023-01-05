@@ -30,3 +30,12 @@ h1, h3, div {
     text-align: center;
     font-size: 3rem;
 }
+
+
+
+
+
+/* Hidden (keep at bottom!) */
+.hidden {
+    display: none;
+}

@@ -16,7 +16,7 @@ body {
 }
 img {
     height: auto;
-    width: 20%;
+    width: 50%;
 }
 
 
@@ -30,12 +30,15 @@ h1, h3, div {
     text-align: center;
     font-size: 3rem;
 }
+.effectRock:hover img, .effectPaper:hover img, .effectScissors:hover img {
+    transform: scale(1.1);
+}
 
 
 
 
 
 /* Hidden (keep at bottom!) */
-.hidden {
+/* .hidden {
     display: none;
-}
+} */

@@ -13,17 +13,20 @@
         <h1>Let's play Rock Paper Scissors!</h1>
         <h3>The first to five points is the winner.</h3>
         <div>
-            <button class="start btn" type="button">Play!</button>
+            <button id="startBtn" class="start btn" type="button">Play!</button>
         </div>
-        <section class="photos hidden">
-            <div class="effectRock">
-                <img src="images/rock.png" alt="Rock">
+        <section id="rpsImages" class="photos hidden">
+            <div class="effectRock rps-image rockBtn" data-image="rock">
+                <img src="images/rock.png" alt="Rock" class="image" id="rock">
+                <p>Rock</p>
             </div>
-            <div class="effectPaper">
-                <img src="images/paper.png" alt="Paper">
+            <div class="effectPaper rps-image paperBtn" data-image="paper">
+                <img src="images/paper.png" alt="Paper" class="image" id="paper">
+                <p>Paper</p>
             </div>
-            <div class="effectScissors">
-                <img src="images/scissors.png" alt="Scissors">
+            <div class="effectScissors rps-image scissorsBtn" data-image="scissors">
+                <img src="images/scissors.png" alt="Scissors" class="image" id="scissors">
+                <p>Scissors</p>
             </div>
         </section>
     </main>

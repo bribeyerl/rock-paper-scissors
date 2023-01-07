@@ -1,45 +1,59 @@
-const choices = ['rock', 'paper', 'scissors'];
-const images = Array.from(document.querySelectorAll('.rps-image'))
-let computerSelection;
+let computerSelection
 let computerInt = 0
-let playerSelection;
+let playerSelection
+let playerChoice
 let playerInt = 0
-let playerScore = 0;
-let computerScore = 0;
-const rockBtn = document.querySelector('.rockBtn')
-const paperBtn = document.querySelector('.paperBtn')
-const scissorsBtn = document.querySelector('.scissorsBtn')
-const playerChoices = [rockBtn, paperBtn, scissorsBtn]
-const computerChoices = ['rock', 'paper', 'scissors']
+let playerScore = 0
+let computerScore = 0
+
+const playerChoices = document.querySelectorAll('.rps-image')
+
+Array.from(playerChoices).forEach(element => element.addEventListener('click', getPlayerChoice))
+
+// document.querySelector('#startBtn').addEventListener('click', game)
 
 
-document.querySelector('#startBtn').addEventListener('click', game)
+    //Get playerSelection and computerSelection
+    // playerChoices.forEach(option => {
+    //     option.addEventListener('click', function(){
+    //         if (playerScore >= 5 || computerScore >= 5) {
+    //             return
+    //         }
+    //         game(option.dataset.option)
+    //     })
+    // })
 
-playerChoices.forEach(option => {
-    option.addEventListener('click', function(){
+    function getPlayerChoice(click) {
+        if (click.target.classList.contains('rock')) {
+            playerSelection = 'rock'
+        } else if (click.target.classList.contains('paper')) {
+            playerSelection = 'paper'
+        } else if (click.target.classList.contains('scissors')){
+            playerSelection = 'scissors'
+        }
+        return playerSelection
+    }
 
-        playerSelection = option.id
-        if(playerSelection === 'rock') {
-            playerInt = 1
-        } else if (playerSelection === 'paper') {
-            playerInt = 2
-        } else if (playerSelection === 'scissors') {
-            playerInt = 3
-        } computerInt = getComputerChoice(computerSelection)
-        // game()
-    })
-})
+    function getComputerChoice() {
+        let computerInt = Math.floor(Math.random() * 3 + 1)
+        let computerOption = ''
 
-function getComputerChoice() {
-    const randomLogic = Math.floor(Math.random() * choices.length)
-    computerSelection = choices[randomLogic]
-}
+        switch (computerInt) {
+            case 1:
+                computerOption = 'rock'
+                break
+            case 2:
+                computerOption = 'paper'
+                break
+            case 3:
+                computerOption = 'scissors'
+                break
+        }
+        return computerOption
+    }
 
-// function getPlayerChoice() {
-//     playerSelection = image.dataset.image
-// }
 
-function playRound(player, computer) {
+function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         console.log('Tie! Try again')
     } else if (playerSelection === 'rock') {
@@ -70,6 +84,7 @@ function playRound(player, computer) {
 }
 
 function game() {
+    getComputerChoice()
     for (let i = 0; i < 5; i++) {
         playRound(playerSelection, computerSelection)
     }

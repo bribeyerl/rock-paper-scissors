@@ -5,23 +5,19 @@ let playerChoice
 let playerInt = 0
 let playerScore = 0
 let computerScore = 0
+let click
+const rpsImages = document.querySelector('.photos')
+const startBtn = document.querySelector('#startBtn')
 
 const playerChoices = document.querySelectorAll('.rps-image')
 
 Array.from(playerChoices).forEach(element => element.addEventListener('click', getPlayerChoice))
+startBtn.addEventListener('click', beginGame)
 
-// document.querySelector('#startBtn').addEventListener('click', game)
-
-
-    //Get playerSelection and computerSelection
-    // playerChoices.forEach(option => {
-    //     option.addEventListener('click', function(){
-    //         if (playerScore >= 5 || computerScore >= 5) {
-    //             return
-    //         }
-    //         game(option.dataset.option)
-    //     })
-    // })
+    function beginGame() {
+        startBtn.classList.add('hidden')
+        rpsImages.classList.toggle('hidden')
+    }
 
     function getPlayerChoice(click) {
         if (click.target.classList.contains('rock')) {
@@ -84,13 +80,16 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    getComputerChoice()
-    for (let i = 0; i < 5; i++) {
+    computerSelection = getComputerChoice()
+
+    if (playerScore >= 5 || computerScore >= 5) {
+        rpsImages.classList.add('hidden')
+    } else {
         playRound(playerSelection, computerSelection)
     }
-    if (computerScore > playerScore) {
-        console.log(`Computer wins game! Final score: ${computerScore} - ${playerScore}`)
-    } else {
-        console.log(`Player wins game! Final score: ${playerScore} - ${computerScore}`)
-    }
 }
+
+//Change all console.log notifications to gui
+//Add scoreboard
+//Add end game function
+//Add restart button

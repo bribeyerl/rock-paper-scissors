@@ -27,17 +27,6 @@ scissors.addEventListener('click', setScissors)
         rpsImages.classList.toggle('hidden')
     }
 
-    // function getPlayerChoice() {
-    //     if (rock.classList.contains('rock')) {
-    //         playerSelection = 'rock'
-    //     } else if (paper.classList.contains('paper')) {
-    //         playerSelection = 'paper'
-    //     } else if (scissors.classList.contains('scissors')) {
-    //         playerSelection = 'scissors'
-    //     }
-    //     return playerSelection
-    // }
-
     function getComputerChoice() {
         let computerChoices = ['rock', 'paper', 'scissors']
         return computerChoices[Math.floor(Math.random() * computerChoices.length)]

@@ -1,4 +1,4 @@
 # rock-paper-scissors
-This is a console-based Rock, Paper, Scissors game built upon concepts learned in the Odin Project.
+Odin Project Javascript project
 
-This app will be built up with some frontend fun in the very near future!
+Live: https://bribeyerl.github.io/rock-paper-scissors/

@@ -1,0 +1,44 @@
+/* Main style */
+.btn, body {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 10px;
+}
+body {
+    background: rgb(224, 210, 52);
+}
+
+/* Layout */
+.photos {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding-top: 7%;
+}
+img {
+    height: auto;
+    width: 50%;
+}
+
+
+/* Additional style */
+.btn {
+    font-size: 4rem;
+    background: black;
+    color: rgb(224, 210, 52);
+}
+h1, h3, div {
+    text-align: center;
+    font-size: 3rem;
+}
+.effectRock:hover img, .effectPaper:hover img, .effectScissors:hover img {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* Hidden (keep at bottom!) */
+.hidden {
+    display: none;
+}

@@ -4,10 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Rock, Paper, Scissors Game</title>
 </head>
 <body>
+    <main>
+        <h1>Let's play Rock Paper Scissors!</h1>
+        <h3>The first to five points is the winner.</h3>
+        <div>
+            <button id="startBtn" class="start btn" type="button">Play!</button>
+        </div>
+        <div>
+            <button id="restartBtn" class="restart btn hidden" type="button">Again?</button>
+        </div>
+        <section id="rpsImages" class="photos hidden">
+            <div class="rock effectRock rps-image">
+                <img src="images/rock.png" alt="Rock"> 
+                <p>Rock</p>
+            </div>
+            <div class="paper effectPaper rps-image">
+                <img src="images/paper.png" alt="Paper">
+                <p >Paper</p>
+            </div>
+            <div class="scissors effectScissors rps-image">
+                <img src="images/scissors.png" alt="Scissors">
+                <p>Scissors</p>
+            </div>
+        </section>
+        <section>
+            <h1 id="winningMessage"></h1>
+        </section>
+        <section>
+            <h1 class="scoreboard">Scoreboard:</h1>
+            <h3 id="score"></h3>
+        </section>
+    </main>
     <script src="main.js"></script>
 </body>
 </html>

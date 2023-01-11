@@ -15,22 +15,28 @@
         <div>
             <button id="startBtn" class="start btn" type="button">Play!</button>
         </div>
+        <div>
+            <button id="restartBtn" class="restart btn hidden" type="button">Again?</button>
+        </div>
         <section id="rpsImages" class="photos hidden">
-            <div class="effectRock rps-image">
+            <div class="rock effectRock rps-image">
                 <img src="images/rock.png" alt="Rock"> 
-                <p class="rock" >Rock</p>
+                <p>Rock</p>
             </div>
-            <div class="effectPaper rps-image">
+            <div class="paper effectPaper rps-image">
                 <img src="images/paper.png" alt="Paper">
-                <p class="paper">Paper</p>
+                <p >Paper</p>
             </div>
-            <div class="effectScissors rps-image">
+            <div class="scissors effectScissors rps-image">
                 <img src="images/scissors.png" alt="Scissors">
-                <p class="scissors">Scissors</p>
+                <p>Scissors</p>
             </div>
         </section>
         <section>
-            <h1>Scoreboard:</h1>
+            <h1 id="winningMessage"></h1>
+        </section>
+        <section>
+            <h1 class="scoreboard">Scoreboard:</h1>
             <h3 id="score"></h3>
         </section>
     </main>
